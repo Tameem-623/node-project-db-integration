@@ -185,6 +185,10 @@ const rdsRoutes = {
   },
 };
 
+app.listen(3001, "0.0.0.0", () => {
+  console.log("Server is running on port 3001");
+});
+
 // Routes
 // app.post("/dynamodb", dynamoDbRoutes.create);
 // app.get("/dynamodb", dynamoDbRoutes.read);
@@ -200,7 +204,7 @@ app.put("/update/:id", rdsRoutes.update);
 app.delete("/delete/:id", rdsRoutes.delete);
 
 app.get("/", (req, res) => {
-  res.status(200).send({ name: "Tameem", age: 23 });
+  res.status(200).send({ name: "Tameem", status: "OK" });
 });
 
 const PORT = process.env.PORT || 3001;
