@@ -8,6 +8,7 @@ const CRUDInterface = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [editingId, setEditingId] = useState(null);
 
+  // Replace this with your API URL
   const API_BASE_URL = "http://localhost:3001";
 
   useEffect(() => {
